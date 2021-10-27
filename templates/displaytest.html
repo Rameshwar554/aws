@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagination</title>
+</head>
+<body style="background-color:PaleGreen;">
+ <table>
+        <tr>
+            <th>Stu_ID</th>
+            <th>&ensp;Name</th>
+            <th>&ensp;Marks</th>
+        </tr>
+ </table>
+    <div class = "container">
+
+        {% for student in students.items %}
+
+        <div class=" alert alert-primary" role="alert">
+            <table>
+                <tr>
+                    <td>{{student.stuid}}</td>
+                    <td>&ensp;&emsp;&emsp;{{student.name}}</td>
+                    <td>&ensp;&emsp;&emsp;{{student.marks}}</td><hr>
+                </tr>
+            </table>
+        </div>
+
+        {% endfor %}
+
+        {% for page in students.iter_pages() %}
+
+            {% if page %}
+                <a href="{{ url_for('displaydat', page_num=page) }}">{{ page }}</a>
+            {% else %}
+             ...
+            {% endif %}
+
+        {% endfor %}
+
+    </div>
+</body>
+</html>

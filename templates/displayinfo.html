@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Info</title>
+</head>
+<body style="background-color:PaleGreen;">
+<form action="" method="post">
+<strong><font color="blue"> Search Name: {{tag}}</font></strong>
+<input type="text" name="tag" placeholder="Enter Name"/>
+    <b><input type="submit" value="Search" name=""></b>
+    </form>
+<ul>
+    <table>
+        <tr>
+            <th>Stu_ID</th>
+            <th>&ensp;Name</th>
+            <th>&ensp;Marks</th>
+        </tr>
+    </table>
+{% for student in students %}
+        <table>
+        <tr>
+    <td>{{student.stuid}}</td>
+    <td>&emsp;&emsp;{{student.name}}</td>
+    <td>&emsp;&emsp;{{student.marks}}</td><hr>
+        </tr>
+        </table>
+{% endfor %}
+</ul>
+</body>
+</html>

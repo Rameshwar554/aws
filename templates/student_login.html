@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+     .bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+  }
+    </style>
+</head>
+<body style="background-color:powderblue;">
+<!--background="{{url_for('static', filename='stu.jpg')}}"-->
+    <center><h1><font color="green">! Welcome !</font></h1></center><br>
+    <center><h1><font color="green">! Log In First To Access Data Of Student !</font></h1></center><br><br>
+    <a href="/mobilelogin">
+        <center><h2>1. VERIFY THROUGH MOBILE </h2></center>
+        <center><button>Click Here</button></center>
+    </a>
+
+     <a href="/emaillogin">
+        <center><h2>2. VERIFY THROUGH EMAIL </h2></center>
+        <center><button>Click Here</button></center>
+    </a>
+
+    <a href="/chatbot">
+<!--        <div class="bottomright">Bottom Right</div>-->
+        <div class="bottomright"><h2><font color="red"> HELP </font> </h2></div>
+        <div class="bottomright"><button>Click Here</button></div>
+    </a>
+
+</body>
+</html>
